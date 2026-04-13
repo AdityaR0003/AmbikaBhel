@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /api/
+
+# If the request matches items/123, rewrite to items.php?id=123
+RewriteRule ^([A-Za-z0-9_-]+)/([0-9]+)$ $1.php?id=$2 [L,QSA]
+
+# If the request matches items, rewrite to items.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([A-Za-z0-9_-]+)$ $1.php [L,QSA]

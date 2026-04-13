@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800;
+  }
+}
+
+/* Base custom styles for scrollbar & glassmorphism default */
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl border border-white shadow-xl shadow-slate-200/50;
+  }
+}
